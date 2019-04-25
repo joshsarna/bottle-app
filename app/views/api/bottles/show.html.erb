@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ml:</strong>
+  <%= @api_bottle.ml %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @api_bottle.color %>
+</p>
+
+<%= link_to 'Edit', edit_api_bottle_path(@api_bottle) %> |
+<%= link_to 'Back', api_bottles_path %>

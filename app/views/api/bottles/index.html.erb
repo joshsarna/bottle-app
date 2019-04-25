@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Api Bottles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ml</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_bottles.each do |api_bottle| %>
+      <tr>
+        <td><%= api_bottle.ml %></td>
+        <td><%= api_bottle.color %></td>
+        <td><%= link_to 'Show', api_bottle %></td>
+        <td><%= link_to 'Edit', edit_api_bottle_path(api_bottle) %></td>
+        <td><%= link_to 'Destroy', api_bottle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Api Bottle', new_api_bottle_path %>
